@@ -8,7 +8,7 @@ GORACE="halt_on_error=1"
 BUILD_DIR=$HOME/influxdb-build
 GO_VERSION=go1.4
 PARALLELISM="-parallel 256"
-TIMEOUT="-timeout 420s"
+TIMEOUT="-timeout 600s"
 
 # Executes the given statement, and exits if the command returns a non-zero code.
 function exit_if_fail {
@@ -67,7 +67,7 @@ case $CIRCLE_NODE_INDEX in
         rc=${PIPESTATUS[0]}
         ;;
     1)
-        go test $TIMEOUT -v -race ./... 2>&1 | tee $CIRCLE_ARTIFACTS/test_logs_race.txt
+        go test $TIMEOUT -p 1 -v -race ./... 2>&1 | tee $CIRCLE_ARTIFACTS/test_logs_race.txt
         rc=${PIPESTATUS[0]}
         ;;
 esac
