@@ -4,7 +4,6 @@
 - [#4790](https://github.com/influxdb/influxdb/pull/4790): Allow openTSDB point-level error logging to be disabled
 
 ### Bugfixes
-- [#4768](https://github.com/influxdb/influxdb/pull/4768): CLI history skips blank lines. Thanks @pires
 - [#4766](https://github.com/influxdb/influxdb/pull/4766): Update CLI usage output. Thanks @aneshas
 - [#4804](https://github.com/influxdb/influxdb/pull/4804): Complete lint for services/admin. Thanks @nii236
 - [#4796](https://github.com/influxdb/influxdb/pull/4796): Check point without fields. Thanks @CrazyJvm
